@@ -2,7 +2,7 @@
 ## A training controller for a Self Driving RC Car
 ### Hack MT 2019
 
-This application orignially lived inside of a master repository for team 21's self driving car project. Due to clutter and git confusion this was packaged and moved into it's own repo.
+This application orignially lived inside of a [master repository](https://github.com/nibraaska/SelfDrivingRCCar) for team 21's self driving car project. Due to clutter and git confusion this was packaged and moved into it's own repo.
 
 ## Techincal notes
 
