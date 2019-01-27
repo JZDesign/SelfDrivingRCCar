@@ -11,12 +11,14 @@ import com.example.hackmtandroidapp.Direction.LEFT
 class Controls {
 
     fun control(direction: Int, port: String? = null) = port?.let {
-        val portInt = it.toInt()
+        val portInt = if(port != " ")it.toInt() else 0
         when (direction) {
+            0,
             //we need to make it so that if angle
+            in 135..75 -> connect(UP.data, portInt)
             in 136..225 -> connect(LEFT.data, portInt)
             in 226..315 -> connect(DOWN.data, portInt)
-            else        -> connect(UP.data, portInt)
+            else        -> connect(RIGHT.data, portInt)
         }
     }
 
