@@ -10,19 +10,18 @@ import com.example.hackmtandroidapp.Direction.RIGHT
 import com.example.hackmtandroidapp.Direction.LEFT
 class Controls {
 
-    fun control(direction: Int, port: String? = null) = port?.let {
-        val portInt = if(port != " ")it.toInt() else 0
+    fun driveIn(direction: Int, atPort: String? = null) = atPort?.let {
+        val portInt = if(atPort != " ")it.toInt() else 0
         when (direction) {
+            in 135..75 -> transmit(UP.data, portInt)
+            in 136..225 -> transmit(LEFT.data, portInt)
             0,
-            //we need to make it so that if angle
-            in 135..75 -> connect(UP.data, portInt)
-            in 136..225 -> connect(LEFT.data, portInt)
-            in 226..315 -> connect(DOWN.data, portInt)
-            else        -> connect(RIGHT.data, portInt)
+            in 226..315 -> transmit(DOWN.data, portInt)
+            else        -> transmit(RIGHT.data, portInt)
         }
     }
 
-    private fun connect(message: String, port: Int) = tryAsync {
+    private fun transmit(message: String, port: Int) = tryAsync {
         Socket(IP, port).also { socket ->
             PrintWriter(socket.getOutputStream()).apply {
                 write(message)
