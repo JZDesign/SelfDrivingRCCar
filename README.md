@@ -32,4 +32,5 @@ Sending a stream of data via socket | X | |
 Controlling the data via Joystick | X | |
 Changing the port through the UI | X | |
 Timing the data sent through the socket | | | X
+Controlling torque and steering of RC target | X | |
 Calibrating Pi to allow for accurate control | | X |
