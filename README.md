@@ -2,11 +2,11 @@
 ## A training controller for a Self Driving RC Car
 ### Hack MT 2019
 
-This application orignially lived inside of a [master repository](https://github.com/nibraaska/SelfDrivingRCCar) for team 21's self driving car project. Due to clutter and git confusion this was packaged and moved into it's own repo.
+This application originally lived inside of a [master repository](https://github.com/nibraaska/SelfDrivingRCCar) for team 21's self driving car project. Due to clutter and git confusion this was packaged and moved into its own repo.
 
-## Techincal notes
+## Technical notes
 
-This project originally was being built in `Java`. A Joystick plugin was utilized to create the control. Connection to the Raspberry Pi was made via Web Socket. In an effort to send less data to the Pi a timer implementation was laid out. Data is sent via websocket in strings representing boolean values : `1000`, `1100`, `1010`, etc., This data was grabbed by the pi to append to imaged data for training. 
+This project originally was being built in `Java`. A Joystick plugin was utilized to create the control. Connection to the Raspberry Pi was made via Websocket. In an effort to send less data to the Pi a timer implementation was laid out. Data is sent via websocket in strings representing boolean values : `1000`, `1100`, `1010`, etc., This data was grabbed by the pi to append to image data for training. 
 
 ### Migrating to Kotlin
 
@@ -14,7 +14,7 @@ Java's cumbersome nature and sometimes ambiguous syntax presented many questions
 
 ### Bumps and Bruises
 
-Aside from the haze of next to zero sleep, masked by caffiene and excitement, that asissted in much `Error Code: ID10T, Message: User Error` there were a few notable obsticles in the implementation of this project.
+Aside from the haze of next to zero sleep, masked by caffeine and excitement, that assisted in much `Error Code: ID10T, Message: User Error` there were a few notable obstacles in the implementation of this project.
 
 Threading was a consideration when implementing the timed sending of data through the socket that resulted in deep dives into the debugger and stackoverflow. 
 
@@ -22,7 +22,7 @@ When connecting to the Pi we discovered that sometimes the socket port was alrea
 
 *Growing Pains* were experienced during the migration from Java, but stretching out and enjoying the freedom of Kotlin greatly outweighed that discomfort.
 
-### What worked, What didnt
+### What worked, What didn't
 
 Attempted with: | Success | Pending Success | Failure
 --------------- | ------- | --------------- | ----------
