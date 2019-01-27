@@ -14,7 +14,7 @@ Java's cumbersome nature and sometimes ambiguous syntax presented many questions
 
 ### Bumps and Bruises
 
-Aside from the haze of next to zero sleep masked by caffiene and excitement that asissted in much `Error Code: ID10T, Message: User Error` there were a few notable obsticles in the implementation of this project.
+Aside from the haze of next to zero sleep, masked by caffiene and excitement, that asissted in much `Error Code: ID10T, Message: User Error` there were a few notable obsticles in the implementation of this project.
 
 Threading was a consideration when implementing the timed sending of data through the socket that resulted in deep dives into the debugger and stackoverflow. 
 
