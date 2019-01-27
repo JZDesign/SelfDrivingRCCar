@@ -13,10 +13,10 @@ class Controls {
     fun control(direction: Int, port: String? = null) = port?.let {
         val portInt = it.toInt()
         when (direction) {
-            in 46..135  -> connect(UP.data, portInt)
+            //we need to make it so that if angle
             in 136..225 -> connect(LEFT.data, portInt)
             in 226..315 -> connect(DOWN.data, portInt)
-            else        -> connect(RIGHT.data, portInt)
+            else        -> connect(UP.data, portInt)
         }
     }
 
