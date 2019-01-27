@@ -6,7 +6,7 @@ This application orignially lived inside of a [master repository](https://github
 
 ## Techincal notes
 
-This project originally was being built in `Java`. A Joystick plugin was utilized to create the control. Connection to the Raspberry Pi was made via Web Socket. In an effort to send less data to the Pi a timer implementation was laid out.
+This project originally was being built in `Java`. A Joystick plugin was utilized to create the control. Connection to the Raspberry Pi was made via Web Socket. In an effort to send less data to the Pi a timer implementation was laid out. Data is sent via websocket in strings representing boolean values : `1000`, `1100`, `1010`, etc., This data was grabbed by the pi to append to imaged data for training. 
 
 ### Migrating to Kotlin
 
@@ -31,6 +31,13 @@ Establishing a socket | X | |
 Sending a stream of data via socket | X | |
 Controlling the data via Joystick | X | |
 Changing the port through the UI | X | |
+Disconnecting from Socket | | X | 
 Timing the data sent through the socket | | | X
 Controlling torque and steering of RC target | X | |
 Calibrating Pi to allow for accurate control | | X |
+
+## Building this project
+0. Establish a socket port to receive the data
+1. Install your IDE of choice like Android Studio and get acquainted with it.
+2. Clone or download this repo and run it on your device or emulator
+3. Set the port and play with the joystick.
