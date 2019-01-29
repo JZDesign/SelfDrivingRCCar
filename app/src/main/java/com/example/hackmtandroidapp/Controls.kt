@@ -24,7 +24,7 @@ class Controls {
     private fun transmit(message: String, port: Int) = tryAsync {
         Socket(IP, port).also { socket ->
             PrintWriter(socket.getOutputStream()).apply {
-                write(message)
+                write(message, 0, message.length)
                 flush()
                 close()
             }
